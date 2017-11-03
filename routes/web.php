@@ -124,6 +124,10 @@ Route::post('/validation','ValidationController@validateForm');
 Route::get('/uploads','UploadFileController@index');
 Route::post('/uploads','UploadFileController@showUploadFile');
 
+Route::get('/send-basic-mail','MailController@basic_email');
+Route::get('/send-html-mail','MailController@html_email');
+Route::get('/send-attach-mail','MailController@attachment_email');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
