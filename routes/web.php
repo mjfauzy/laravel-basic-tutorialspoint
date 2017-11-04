@@ -128,6 +128,16 @@ Route::get('/send-basic-mail','MailController@basic_email');
 Route::get('/send-html-mail','MailController@html_email');
 Route::get('/send-attach-mail','MailController@attachment_email');
 
+Route::get('/ajax', function() {
+    return view('message');
+});
+
+Route::post('/getmsg','AjaxController@index');
+
+Route::get('/error',function() {
+    abort(404);
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
