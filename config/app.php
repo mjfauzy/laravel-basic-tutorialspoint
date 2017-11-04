@@ -176,6 +176,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\TestFacadesServiceProvider::class,
 
     ],
 
@@ -227,7 +228,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Laravelcollective\Html\FormFacade::class,
         'Html' => Laravelcollective\Html\HtmlFacade::class,
-
+        'TestFacades' => App\Test\Facades\TestFacades::class,
     ],
 
 ];
