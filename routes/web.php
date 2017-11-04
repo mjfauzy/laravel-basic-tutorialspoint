@@ -138,6 +138,9 @@ Route::get('/error',function() {
     abort(404);
 });
 
+Route::get('/event','CreateStudentController@insertform');
+Route::post('/addstudent','CreateStudentController@insert');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
